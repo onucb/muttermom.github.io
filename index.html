@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Авторизация Telegram</title>
+<title>Заплати и приходи, код вводи</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=50% initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 	localStorage.setItem('tgusername', JSON.stringify(user.username));
 	localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
     alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    newurl = window.location.origin '/' + user.id + '?telegram=' + user.id;
+    newurl = window.location.origin + '/tg?telegram=' + user.id;
     window.location.href = newurl;
   }
 onTelegramAuth(user)()
@@ -33,8 +33,8 @@ onTelegramAuth(user)()
 <script>
 function photo(){
       var tgphoto = localStorage.getItem('tguserphoto');
-      //alert(tgphoto.replace(/\"/g, ""));
-      if (user.photo_url == tgphoto.replace(/\"/g, "")) {
+      alert(tgphoto.replace(/\"/g, ""));
+      if (tgphoto == tgphoto.replace(/\"/g, "")) {
       var frame = document.querySelector('.frame');
       var ilona = document.createElement("IMG");
       ilona.src = "https://nwotb.ml/icon.png";
@@ -62,7 +62,7 @@ function search88() {
                     if (MD5(input.value)==hash.acthash) { 
                         localStorage.removeItem('pass');
                         localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                        newurl = "/?telegram="+tguser;
+                        newurl = "/tg?tg="+tguser;
                         alert(newurl);
                         window.open(newurl)
                     } else {
@@ -70,7 +70,7 @@ function search88() {
                         localStorage.removeItem('pass');
                         localStorage.setItem('pass', JSON.stringify("Kynu nognucky uJlu noLLIeJl Haxyū"));
                         localStorage.setItem('tguser', JSON.stringify(tguser));
-                        window.open('/?omcocume=nucbky')
+                        window.open('/tg')
                     }
                 };
         $(document).ready(function() {
