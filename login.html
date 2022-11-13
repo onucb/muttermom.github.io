@@ -16,6 +16,19 @@
  
 <script>
 var pass = localStorage.getItem('pass'); alert(pass);
+                    if (pass=='null') { 
+                        localStorage.removeItem('pass');
+                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
+                        newurl = "/?password="+'pass';
+                        alert(newurl);
+                        window.open(newurl)
+                    } else {
+                        alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробела в начале и конце‼️');
+                        localStorage.removeItem('pass');
+                        localStorage.setItem('pass', JSON.stringify("Kynu nognucky uJlu noLLIeJl Haxyū"));
+                        localStorage.setItem('tguser', JSON.stringify(tguser));
+                        //hh
+                    }
 const input = document.getElementById('txt');
 window.hash = {
                   acthash: "d02030f4ddfefa24c3d4b7d57dfdbec1"
