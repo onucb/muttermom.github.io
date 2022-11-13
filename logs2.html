@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Заплати и приходи, код вводи</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=50% initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body><center> </br> </br> </br> 
+</br> </br> 
+<h1>
+<div align="center">
+ <form>
+  <input type="button" value="Войти на сайт" onClick="Input()">
+ </form>
+</div>
+<script type="text/javascript">
+function Input(){
+	var tglo = "";
+	var tgpa = "";
+	var tglo = localStorage.getItem('tglo');
+	alert(tglo.replace(/\"/g, ""));
+	var tgpa = localStorage.getItem('tgpa');
+	alert(tgpa.replace(/\"/g, ""));
+
+	if (tglo=="login" && tgpa=="pass") {
+		login_ok = true;
+		window.location = "/logs.html";
+		}
+
+	if (tglo=="login2" && tgpa=="pass2") {
+		login_ok = true;
+		window.location = "/logs.html";
+		}
+
+	if (login_ok==false) alert("Неверный логин или пароль!");
+	}
+Input()
+</script>
+
+</h1>
+</center>
+</body>
+</html>
