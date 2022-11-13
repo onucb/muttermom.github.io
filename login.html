@@ -18,13 +18,13 @@ function Input(){
 login_ok = false;
 user_name = "";
 password = "";
-user_name = prompt("Логин","");
+user_name = prompt("Введите логин","");
 user_name = user_name.toLowerCase();
 var tgl = user_name;
 localStorage.removeItem('tglo');
 localStorage.setItem('tglo', JSON.stringify(tgl));
 alert(tgl);
-password = prompt("Пароль","");
+password = prompt("Введите пароль","");
 password = password.toLowerCase();
 var tgp = password;
 localStorage.removeItem('tgpa');
