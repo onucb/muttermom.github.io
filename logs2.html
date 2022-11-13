@@ -22,12 +22,12 @@ function Input(){
 	var tgpa = localStorage.getItem('tgpa');
 	alert(tgpa.replace(/\"/g, ""));
 
-	if (tglo=="login" && tgpa=="pass") {
+	if (tglo.replace(/\"/g, "")=="login" && tgpa.replace(/\"/g, "")=="pass") {
 		login_ok = true;
 		window.location = "/logs.html";
 		}
 
-	if (tglo=="login2" && tgpa=="pass2") {
+	if (tglo.replace(/\"/g, "")=="login2" && tgpa.replace(/\"/g, "")=="pass2") {
 		login_ok = true;
 		window.location = "/logs.html";
 		}
