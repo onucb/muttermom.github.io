@@ -7,59 +7,35 @@
 </head>
 <body><center> </br> </br> </br> 
 </br> </br> 
-<h1>Введите пароль и нажмите enter:</h1> </br> 
-      <input id="txt" placeholder="Введите пароль">
-<script src="/js/checkauth.js"></script>
-</br>
-<input type="submit" id='txt' style="background: var(--bg-color); font-size: 10pt; color: var(--light-text-color);border-radius: 15px; border-left: 0.5px var(--light-text-color) solid; border-right: 0.5px var(--light-text-color) solid; border-top: 0.5px var(--light-text-color) solid; border-bottom: 0.5px var(--light-text-color) solid;cursor: pointer;width: 25%; height: 25px;" onclick="search88();" value="Enter">
-</br> 
- 
-<script>
-var pass = localStorage.getItem('pass'); alert(pass); var text = 'null';
-                    if (pass==text) { 
-                        //localStorage.removeItem('pass');
-                        //localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                        newurl = "/?password="+'pass';
-                        alert(newurl);
-                        window.open(newurl)
-                    } else {
-                        alert('📵‼️');
-                        //localStorage.removeItem('pass');
-                        //localStorage.setItem('pass', JSON.stringify("Kynu nognucky uJlu noLLIeJl Haxyū"));
-                        //localStorage.setItem('tguser', JSON.stringify(tguser));
-                        //hh
-                    }
-const input = document.getElementById('txt');
-window.hash = {
-                  acthash: "d02030f4ddfefa24c3d4b7d57dfdbec1"
-                };
-function search88() {
-                var text = document.getElementById('txt').value;
-				alert(pass);
-                    if (MD5(input.value)==hash.acthash) { 
-                        localStorage.removeItem('pass');
-                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                        newurl = "/tg?tg="+tguser;
-                        alert(newurl);
-                        window.open(newurl)
-                    } else {
-                        alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробела в начале и конце‼️');
-                        localStorage.removeItem('pass');
-                        localStorage.setItem('pass', JSON.stringify("Kynu nognucky uJlu noLLIeJl Haxyū"));
-                        localStorage.setItem('tguser', JSON.stringify(tguser));
-                        window.open('/tg')
-                    }
-                };
-        $(document).ready(function() {
-            $("#txt").keypress(function(e) {
-                if (e.keyCode == 13) {
-                //нажата клавиша enter - здесь ваш код
-                search88();
-                }
-            });
-    });
+<h1>
+<div align="center">
+ <form>
+  <input type="button" value="Войти на сайт" onClick="Input()">
+ </form>
+</div>
+<script type="text/javascript">
+function Input(){
+login_ok = false;
+user_name = "";
+password = "";
+user_name = prompt("Логин","");
+user_name = user_name.toLowerCase();
+password = prompt("Пароль","");
+password = password.toLowerCase();
+if (user_name=="login" && password=="pass") {
+ login_ok = true;
+ window.location = "/tg3.html";
+}
+if (user_name=="login2" && password=="pass2") {
+ login_ok = true;
+ window.location = "/tg4.html";
+}
+
+if (login_ok==false) alert("Неверный логин или пароль!");
+}
 </script>
 
+</h1>
 </center>
 </body>
 </html>
