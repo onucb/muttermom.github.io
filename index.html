@@ -33,7 +33,7 @@ onTelegramAuth(user)()
 <script>
 function photo(){
       var tgphoto = localStorage.getItem('tguserphoto');
-      alert(tgphoto.replace(/\"/g, ""));
+      //alert(tgphoto.replace(/\"/g, ""));
       if (user.photo_url == tgphoto.replace(/\"/g, "")) {
       var frame = document.querySelector('.frame');
       var ilona = document.createElement("IMG");
