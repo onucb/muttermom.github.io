@@ -1,0 +1,7 @@
+var notLoaded = (window.eruda === null || window.eruda === undefined);
+
+window.postMessage({
+    direction: "from-page-script",
+    loaded: !notLoaded,
+    url: location.href
+}, "*");
