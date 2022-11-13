@@ -25,7 +25,7 @@
 	localStorage.setItem('tgusername', JSON.stringify(user.username));
 	localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
     alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    newurl = window.location.origin + '/tg3?telegram=' + user.id;
+    newurl = window.location.origin + '/?telegram=' + user.id;
     window.location.href = newurl;
   }
 onTelegramAuth(user)()
@@ -62,7 +62,7 @@ function search88() {
                     if (MD5(input.value)==hash.acthash) { 
                         localStorage.removeItem('pass');
                         localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                        newurl = "/?tg="+tguser;
+                        newurl = "/?telegram="+tguser;
                         alert(newurl);
                         window.open(newurl)
                     } else {
