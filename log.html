@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Заплати и приходи, код вводи</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=50% initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body><center> </br> </br> </br> 
+</br> </br> 
+<h1>
+<div align="center">
+ <form>
+  <input type="button" value="Войти на сайт" onClick="Input()">
+ </form>
+</div>
+<script type="text/javascript">
+function Input(){
+login_ok = false;
+user_name = "";
+password = "";
+user_name = prompt("Логин","");
+user_name = user_name.toLowerCase();
+var tgl = user_name;
+localStorage.removeItem('tglo');
+localStorage.setItem('tglo', JSON.stringify(tgl));
+alert(tgl);
+password = prompt("Пароль","");
+password = password.toLowerCase();
+var tgp = password;
+localStorage.removeItem('tgpa');
+localStorage.setItem('tgpa', JSON.stringify(tgp));
+alert(tgp);
+if (user_name=="login" && password=="pass") {
+ login_ok = true;
+ window.location = "/tg3.html";
+}
+if (user_name=="login2" && password=="pass2") {
+ login_ok = true;
+ window.location = "/tg4.html";
+}
+
+if (login_ok==false) alert("Неверный логин или пароль!");
+}
+</script>
+
+</h1>
+</center>
+</body>
+</html>
