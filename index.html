@@ -25,7 +25,7 @@
 	localStorage.setItem('tgusername', JSON.stringify(user.username));
 	localStorage.setItem('tguserphoto', JSON.stringify(user.photo_url));
     alert('Вы уже авторизованы как: ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    newurl = window.location.origin + '/?telegram=' + user.id;
+    newurl = window.location.origin '/' + user.id + '?telegram=' + user.id;
     window.location.href = newurl;
   }
 onTelegramAuth(user)()
@@ -34,7 +34,7 @@ onTelegramAuth(user)()
 function photo(){
       var tgphoto = localStorage.getItem('tguserphoto');
       alert(tgphoto.replace(/\"/g, ""));
-      if (tgphoto == tgphoto.replace(/\"/g, "")) {
+      if (user.photo_url == tgphoto.replace(/\"/g, "")) {
       var frame = document.querySelector('.frame');
       var ilona = document.createElement("IMG");
       ilona.src = "https://nwotb.ml/icon.png";
