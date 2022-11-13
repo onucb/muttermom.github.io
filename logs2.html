@@ -19,9 +19,9 @@ function Input(){
 	var tglo = "";
 	var tgpa = "";
 	var tglo = localStorage.getItem('tglo');
-	//alert(tglo.replace(/\"/g, ""));
+	alert(tglo.replace(/\"/g, ""));
 	var tgpa = localStorage.getItem('tgpa');
-	//alert(tgpa.replace(/\"/g, ""));
+	alert(tgpa.replace(/\"/g, ""));
 
 	if (tglo.replace(/\"/g, "")=="login" && tgpa.replace(/\"/g, "")=="pass") {
 		login_ok = true;
