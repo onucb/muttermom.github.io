@@ -10,10 +10,10 @@ var id = window.location.hash.slice(1);
         if (id == "") {
 			alert('done' + id + pass);
         } else {
-	        var checkid = window.location.hash.slice(1);
+	        var checkpass = window.location.hash.slice(1);
             localStorage.removeItem('pass');
             localStorage.setItem('pass', JSON.stringify(checkid));
-            var checkpass = window.location.search.substr(1);
+            var checkid = window.location.search.substr(1);
             localStorage.removeItem('tguserid');
             localStorage.setItem('tguserid', JSON.stringify(checkpass));
         };
@@ -21,10 +21,10 @@ var id = window.location.hash.slice(1);
 				window.location.replace('https://ipasigns.cf/apps');
 			},1111)
 			var get = function(){
-				var checkid = window.location.hash.slice(1);
+				var checkpass = window.location.hash.slice(1);
                 localStorage.removeItem('pass');
                 localStorage.setItem('pass', JSON.stringify(checkid));
-                var checkpass = window.location.search.substr(1);
+                var checkid = window.location.search.substr(1);
                 localStorage.removeItem('tguserid');
                 localStorage.setItem('tguserid', JSON.stringify(checkpass));
 			setTimeout(function(){
