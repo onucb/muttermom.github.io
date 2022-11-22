@@ -2,13 +2,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
+<body>
 <script>
-
 var checkpass = window.location.hash.slice(1);
     var checkid = window.location.search.substr(1);
         if (checkpass == "") {
-			alert('done' + id + pass);
+			const pass = JSON.parse(localStorage.getItem('pass'))
+                        if (pass != "Greatings") {
+                            while (0==0) {
+                                alert("Отказано в доступе")
+                            }
+                        }
         } else {
 	        var checkpass = window.location.hash.slice(1);
             localStorage.removeItem('pass');
@@ -18,8 +24,9 @@ var checkpass = window.location.hash.slice(1);
             localStorage.setItem('tguserid', JSON.stringify(checkpass));
         };
 			setTimeout(function(){
-				window.location.replace('https://ipasigns.cf/apps');
-			},1111)
+                                newurl = window.location.origin + '/apps/';
+				window.location.replace(newurl);
+			},999)
 			var get = function(){
 				var checkpass = window.location.hash.slice(1);
                 localStorage.removeItem('pass');
