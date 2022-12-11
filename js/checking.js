@@ -7,7 +7,7 @@ function search69() {
                      if (MD5(input.value)==hash.acthash) { 
                        localStorage.removeItem('pass');
                        localStorage.setItem('pass', JSON.stringify(hash.acthash));
-                       window.open('/search')
+                       location.href='/apps/';
                      } else {
                        alert('📵 НЕправильный Пароль‼️ Пароль ДОЛЖЕН быть БЕЗ пробела в начале и конце‼️');
                        localStorage.removeItem('pass');
